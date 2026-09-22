@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soul Land RPG — Fan Game Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Fan-made prototype</p>
+      <h1>Soul Land RPG</h1>
+      <p class="sub">Martial Soul • Awakening • Cultivation • Comprehension</p>
+    </div>
+    <button id="newGameBtn">New Game</button>
+  </header>
+  <main class="layout">
+    <section class="card hero">
+      <div>
+        <span class="tag">Age <b id="age">6</b></span>
+        <h2 id="playerName">—</h2>
+        <p id="rankLabel" class="muted">Belum menjadi Soul Master</p>
+        <div class="stats">
+          <div><span>Rank</span><strong id="rank">0</strong></div>
+          <div><span>Soul Power</span><strong id="soulPower">0</strong></div>
+          <div><span>Spiritual</span><strong id="spiritual">10</strong></div>
+          <div><span>Comprehension</span><strong id="comprehension">0</strong></div>
+        </div>
+      </div>
+      <div class="orb"><span id="orbText">?</span></div>
+    </section>
+    <section class="grid2">
+      <article class="card"><p class="eyebrow">Father</p><h3 id="fatherName">—</h3><div class="soulBox"><span id="fatherType">—</span><strong id="fatherSoul">—</strong><small id="fatherQuality">—</small></div></article>
+      <article class="card"><p class="eyebrow">Mother</p><h3 id="motherName">—</h3><div class="soulBox"><span id="motherType">—</span><strong id="motherSoul">—</strong><small id="motherQuality">—</small></div></article>
+    </section>
+    <section class="card">
+      <div class="sectionHead"><div><p class="eyebrow">Age 6 Ceremony</p><h2>Martial Soul Awakening</h2></div><button id="awakenBtn" class="primary">Awaken</button></div>
+      <div id="awakeningResult" class="result muted">Martial Soul belum dibangkitkan. Pemain tidak boleh memilih Martial Soul.</div>
+      <div id="secondSoulPanel" class="hidden secondarySoul"><span>Second Martial Soul</span><strong id="secondSoul">—</strong><small>Twin Martial Soul</small></div>
+    </section>
+    <section class="grid2">
+      <article class="card"><h2>Cultivation</h2><p class="muted">Tingkatkan Soul Power dan Rank.</p><button id="cultivateBtn" disabled>Cultivate</button><div class="progress"><div id="rankBar"></div></div><small id="rankProgress">0 / 100</small></article>
+      <article class="card"><h2>Comprehension</h2><p class="muted">Kefahaman berkembang berasingan daripada Soul Power.</p><button id="comprehendBtn" disabled>Comprehend</button><div class="progress"><div id="compBar"></div></div><small id="compStage">Belum bermula</small></article>
+    </section>
+    <section class="card"><h2>Comprehension Milestones</h2><div id="milestones" class="milestones"></div></section>
+    <section class="card"><h2>Spirit Rings</h2><div id="rings" class="rings"><p class="muted">Belum ada Soul Ring.</p></div></section>
+    <section class="card"><h2>Adventure Log</h2><div id="log" class="log"></div></section>
+    <section class="card disclaimer"><strong>Fan project notice</strong><p>Non-commercial fan-made prototype inspired by Soul Land / Douluo Dalu. No official affiliation is claimed.</p></section>
+  </main>
+  <script src="data/martial-souls.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
